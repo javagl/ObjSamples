@@ -7,7 +7,7 @@ package de.javagl.obj.samples;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
-import java.util.IdentityHashMap;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
@@ -64,7 +64,7 @@ public class ObjSample_04_MakeTexCoordsUnique
         ReadableObj obj)
     {
         Map<Integer, Set<Integer>> map = 
-            new IdentityHashMap<Integer, Set<Integer>>();
+            new LinkedHashMap<Integer, Set<Integer>>();
         for (int i = 0; i < obj.getNumFaces(); i++)
         {
             ObjFace face = obj.getFace(i);
